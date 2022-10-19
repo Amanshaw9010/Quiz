@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { saveData } from '../action/Index'
 import '../CSS/quiz.css'
 import QuizReducer from '../reducer/QuizReducer'
@@ -71,7 +71,7 @@ const Quiz = () => {
             setDisplay("none");
         }
 
-        if (questionCount < data.length ) {
+        if (questionCount < data.length) {
             setDisplayNext("block");
         }
     }
@@ -82,7 +82,7 @@ const Quiz = () => {
     return (
         <>
             <div className="main">
-            <a href="/endquiz"><h3 onClick={()=> dispatch(saveData(submitData))}>submit</h3></a>
+                <a href="/endquiz"><h3  >submit</h3></a>
                 <div className="container">
                     <h2>{data[questionCount].question}</h2>
                     <div className="quiz">
