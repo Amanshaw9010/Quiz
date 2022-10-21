@@ -21,7 +21,7 @@ const Ecommerce = (props) => {
         {
             "name": "Household",
             "productList": [
-               {
+                {
                     "name": "Chair",
                     "price": 122
                 },
@@ -33,25 +33,46 @@ const Ecommerce = (props) => {
         }
     ]
 
+
+
+
+
     return (
-        <>
-            <div className='backdrop_e'>
+
+        <div className='backdrop'>
+            {data1.map((p, CategoryIndex) => {
+                return (
+                    <>
+                        <div key={p}></div>
+                        <h1>{p.name}</h1>
 
 
-                <div className='main_e'>
+                        <div className='product'>
+                            {p.productList.map((productEl, itemIndex) => {
+                                return (
+                                    <>
+                                        <div className="item">
+                                            <div key={productEl}></div>
+                                            <b>Name: {productEl.name}</b>
+                                            <b>Price: {productEl.price}</b>
 
-                    <Category dataMain={data1} index="0" />
- 
-                     
-                    <Category dataMain={data1} index="1" />
+                                            <div className="productBtn">
+                                                <button>Add To Cart</button>
+                                                <button>  Remove To Cart</button>
+                                            </div>
+                                        </div>
+                                    </>
 
-                    
+                                )
+                            })}
+                        </div>
 
-                </div>
+                    </>
+                )
+            })}
 
-            </div>
+        </div>
 
-        </>
     )
 }
 
