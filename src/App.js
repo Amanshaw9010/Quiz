@@ -4,13 +4,15 @@ import Quiz from './Component/Quiz';
 import EndQuiz from './Component/EndQuiz';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Second from './Component/Second';
- 
+import HomeContainer from './container/HomeContainer';
+import HeaderContainer from './container/HeaderContainer';
+
+
 function App() {
   return (
     <>
-      <Second />
-      
-
+       <HeaderContainer/>
+      <HomeContainer />
     </>
 
 

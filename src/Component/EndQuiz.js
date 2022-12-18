@@ -15,25 +15,6 @@ const EndQuiz = () => {
     }, [])
 
 
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
     const list = useSelector((state) =>
         state.QuizReducer.list
     )

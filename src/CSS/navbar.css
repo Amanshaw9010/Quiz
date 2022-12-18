@@ -1,0 +1,14 @@
+.navMain{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    background-color: #41a0d7;
+    overflow: hidden;
+}
+
+.nav i{
+    margin-right: 3rem;
+}
+
